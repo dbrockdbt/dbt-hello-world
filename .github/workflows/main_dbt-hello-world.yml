@@ -51,6 +51,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'dbt-hello-world'
-          slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_FBF7DD86E08D40E9AD5C6DCAF7E5B628 }}
-          package: .
+          package: ./dist/dbt-hello-world
